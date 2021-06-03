@@ -1,0 +1,42 @@
+.app{
+    display: inline-flex;
+    border:1px solid black;
+    margin:10px;
+}
+
+.app1,.app2{
+    margin:10px;
+}
+
+.navbar{
+    border-bottom:1px solid black;
+    background-color: black;
+    width: 100%;
+}
+.navbar li{
+    color:white;
+    float: left;
+    list-style: none;
+    font-size: 20px;
+    margin:10px 20px;
+    cursor: pointer;
+}
+
+table,th,td{
+    border:1px solid black;
+    border-collapse:collapse;
+    text-align:left;
+  }
+  
+  tr{
+    width:100%;
+  }
+  
+  th,td{
+    padding:15px;
+  }
+  
+  .blue{
+    background-color:lightblue;
+    font-weight:bold;
+  }
