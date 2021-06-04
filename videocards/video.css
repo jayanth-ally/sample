@@ -1,0 +1,135 @@
+body{
+    background-color: #54c3ef;
+    font-family:Arial;
+    margin:0;
+  }
+  
+  .heading{
+    width:100%;
+    text-align:center;
+  }
+  
+  .heading .page-title{
+        font-family: sans-serif;
+        color: #fad744;
+        font-size:70px;
+        text-shadow: 3px 3px #000000;
+  }
+  
+  .wrapper{
+    text-align:center;
+}
+.empty{
+    float: left;
+    width:20%;
+}
+.main-card{
+    margin: auto;
+    width: 70%;
+    background-color:white;
+    box-sizing: border-box;
+    padding:20px;
+    border-radius:7px;
+    max-width: 835px;
+  }
+
+  .main-card:after{
+      content: "";
+      display: table;
+      clear: both;
+  }
+  
+  .left{
+    float:left;
+    width:450px;
+  }
+  .right{
+    float:left;
+    width:300px;
+    margin-left: 20px;
+    border-left: 1px solid grey;
+    padding-left: 10px;
+  }
+  .video-details{
+    margin: 10px; 
+    font-size:20px;
+  }
+  
+  .video-views{
+    color:rgba(0, 0, 0, 0.7);
+    float:left;
+  }
+  
+  .video-icons{
+    float:right;
+  }
+  
+  .video-icons .fa{
+    cursor:pointer;
+    margin-left:5px;
+  }
+  
+  .fa-heart-o:hover{
+    color:red;
+  }
+  
+  .fa-comment-o:hover{
+    color:SeaGreen;
+  }
+  
+  .fa-bookmark-o:hover{
+    color:DarkOrange;
+  }
+  
+  .divider{
+    margin:40px 10px;
+  }
+  
+  hr{
+    width:100%;
+    float:center;
+  }
+  
+  .video-description .content{
+    font-size:20px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.7);
+    text-align:left;
+  }
+  
+  .video-card{
+    padding-bottom:10px;
+    border:2px solid grey;
+    width:300px;
+    border-radius:5px;
+    margin:0px 5px 30px 5px;
+    background-color: white;
+  }
+
+  .final-card{
+      margin:0 5px;
+  }
+  .video-card.selected{
+    border:2px solid #fad744;
+  }
+  .video-card h3{
+    margin:5px;
+  }
+  .video-card:hover{
+    border:2px solid #fad744;
+  }
+  .video-card img{
+    width:300px;
+    height:160px;
+  }
+
+  footer{
+      margin-top: 20px;
+      height: 50px;
+      width: 100%;
+      margin-bottom: 0;
+      background-color: white;
+      text-align: center;
+  }
