@@ -12,43 +12,42 @@ $(document).ready(function(){
     nav.classList.remove('nav-active');
     nav.classList.add('nav-active');
 
-    console.log(productList)
 
-    let clothing = document.getElementById('clothing')
-    let accessories = document.getElementById('accessories');
+    const clothing = document.getElementById('clothing')
+    const accessories = document.getElementById('accessories');
 
     productList.map((product,i) => {
 
-        let div = document.createElement('div');
-        div.classList.add('card');
+        const productCard = document.createElement('div');
+        productCard.classList.add('card');
 
-        let divImg = document.createElement('div');
-        divImg.classList.add('img');
-        let img = document.createElement('img');
-        img.src = product.preview;
-        divImg.appendChild(img);
+        const productImgContainer = document.createElement('div');
+        productImgContainer.classList.add('img');
+        const imgTag = document.createElement('img');
+        imgTag.src = product.preview;
+        productImgContainer.appendChild(imgTag);
 
-        let details = document.createElement('div');
-        details.classList.add('details');
+        const productDetails = document.createElement('div');
+        productDetails.classList.add('details');
 
-        let h3 = document.createElement('h3');
-        h3.innerHTML = product.name;
-        let h4 = document.createElement('h4');
-        h4.innerHTML = product.brand;
-        let h5 = document.createElement('h5');
-        h5.innerHTML = "Rs "+product.price;
+        const productName = document.createElement('h3');
+        productName.innerHTML = product.name;
+        const productBrand = document.createElement('h4');
+        productBrand.innerHTML = product.brand;
+        const productPrice = document.createElement('h5');
+        productPrice.innerHTML = "Rs "+product.price;
 
-        details.appendChild(h3);
-        details.appendChild(h4);
-        details.appendChild(h5);
+        productDetails.appendChild(productName);
+        productDetails.appendChild(productBrand);
+        productDetails.appendChild(productPrice);
 
-        div.appendChild(divImg);
-        div.appendChild(details);
+        productCard.appendChild(productImgContainer);
+        productCard.appendChild(productDetails);
 
         if(i < 5){
-            clothing.appendChild(div);
+            clothing.appendChild(productCard);
         }else{
-            accessories.appendChild(div);
+            accessories.appendChild(productCard);
         }
     })
 });
