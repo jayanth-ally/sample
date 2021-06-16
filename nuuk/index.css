@@ -40,11 +40,16 @@ section{
 }
 
 main .section {
-    padding: 10% 5% 5%;
+    padding: 10% 0% 5%;
 }
 
 .section {
-    padding:10% 5%;
+    padding:10% 0%;
+}
+
+.container{
+    margin:auto;
+    max-width: 90%;
 }
 
 .banner {
