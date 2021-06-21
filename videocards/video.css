@@ -133,3 +133,8 @@ body{
       background-color: white;
       text-align: center;
   }
+
+  #video-player{
+    width: 420px;
+    height: 240px;
+  }
