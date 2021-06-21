@@ -37,7 +37,13 @@ const changeVideo = async (id) => {
     })
     const player = document.getElementById('video-player');
     player.src = "https://player.vimeo.com/video/"+video.vimeoId;
-    console.log(player.src);
+
+    const views = document.getElementById('views');
+    views.innerText = video.view+" views";
+    const title = document.getElementById('title');
+    title.innerText = video.title;
+    const description = document.getElementById('description');
+    description.innerText = video.description;
 }
 
 $(document).ready(()=>{
