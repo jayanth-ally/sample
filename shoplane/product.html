@@ -46,14 +46,29 @@
           </div>
     </nav>
     
-    <section>
-      <h2 class="section-heading">Clothing for Men and Women</h2>
-      <div class="card-container" id="clothing"></div>
-    </section>
-
-    <section>
-      <h2 class="section-heading">Accessories for Men and Women</h2>
-      <div class="card-container" id="accessories"></div>
+    <section id="product">
+        <div class="left-column">
+            <img id="product-img" atl="Product Image"/>
+        </div>
+        <div class="right-column">
+            <div class="product-description">
+                <h1 id="name"></h1>
+                <h4 id="brand"></h4>
+                <h3>Price: Rs <span id="price"></span></h3>
+                <div class="description">
+                  <h3>Description</h3>
+                  <p id="description"></p>
+                </div>
+                <div class="product-preview">
+                  <h3>Product Preview</h3>
+                  <div class="previewImg">
+                  </div>
+                </div>
+              </div>
+            <div class="btn">
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -94,7 +109,7 @@
     <!-- My Scripts -->
     <script src="./js/burger.js"></script>
     <script src="./js/data.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/product.js"></script>
 
   </body>
 </html>

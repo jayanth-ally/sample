@@ -1,25 +1,16 @@
 $(document).ready(function(){
-
-    var burger = document.querySelector(".burger");
-    var nav = document.querySelector(".nav-links");
-    
-    burger.addEventListener("click", function() {
-        nav.classList.toggle("nav-active");
-        burger.classList.toggle("toggle");
-    });
-    
-    burger.classList.remove('toggle');
-    nav.classList.remove('nav-active');
-    nav.classList.add('nav-active');
-
-
     const clothing = document.getElementById('clothing')
     const accessories = document.getElementById('accessories');
 
-    productList.map((product,i) => {
+    productList.forEach((product,i) => {
 
         const productCard = document.createElement('div');
         productCard.classList.add('card');
+
+        const productAnchor = document.createElement('a');
+        productAnchor.href="product.html?product_id="+product.id;
+
+
 
         const productImgContainer = document.createElement('div');
         productImgContainer.classList.add('img');
@@ -41,8 +32,10 @@ $(document).ready(function(){
         productDetails.appendChild(productBrand);
         productDetails.appendChild(productPrice);
 
-        productCard.appendChild(productImgContainer);
-        productCard.appendChild(productDetails);
+        productAnchor.appendChild(productImgContainer);
+        productAnchor.appendChild(productDetails);
+
+        productCard.appendChild(productAnchor);
 
         if(i < 5){
             clothing.appendChild(productCard);
