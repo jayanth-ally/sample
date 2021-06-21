@@ -1,11 +1,6 @@
-$(document).ready(function(){
-    const params = new URLSearchParams(location.search);
-    const product_id = params.get('product_id');
 
-    console.log(product_id);
-
-    const product = productList.filter(p => p.id === product_id)[0]
-
+const loadProduct = async (id) => {
+    const product = await getDataFromApi(`https://5d76bf96515d1a0014085cf9.mockapi.io/product/${id}`);
     const productImg = document.getElementById('product-img');
     productImg.src = product.photos[0];
 
@@ -29,6 +24,15 @@ $(document).ready(function(){
         }
         productImages.appendChild(imgTag)
     })
+
+    addToCart(product);
+}
+
+$(document).ready(function(){
+    const params = new URLSearchParams(location.search);
+    const product_id = params.get('product_id');
+
+    loadProduct(product_id)
 })
 
 $(document).on('click','.non-active',function(){

@@ -1,4 +1,5 @@
-$(document).ready(function(){
+const loadData = async () => {
+    const productList = await getDataFromApi("https://5d76bf96515d1a0014085cf9.mockapi.io/product");
     const clothing = document.getElementById('clothing')
     const accessories = document.getElementById('accessories');
 
@@ -43,4 +44,17 @@ $(document).ready(function(){
             accessories.appendChild(productCard);
         }
     })
+}
+
+$(document).ready(function(){
+    loadData();
+    $("#banner").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false
+      });
 });

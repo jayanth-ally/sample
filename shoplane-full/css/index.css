@@ -9,6 +9,10 @@
     font-family: "Montserrat", sans-serif;
 }
 
+h3{
+    font-size: 1rem;
+}
+
 html {
     scroll-behavior:smooth
 }
@@ -318,6 +322,20 @@ footer ul li a:hover, footer ul li:hover {
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+}
+
+.order-confirm {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.order-confirm img {
+    height: 300px;
+}
+
+.order-confirm p {
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 900px){

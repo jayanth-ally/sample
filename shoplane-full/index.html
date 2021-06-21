@@ -14,9 +14,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="../lib/slick/slick.css">
+    <link rel="stylesheet" href="../lib/slick/slick-theme.css">
+
 
     <title>SHOPLANE - A place for shopping</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/features.css">
   </head>
   <body>
     <nav class="fixed-navbar">
@@ -31,7 +37,7 @@
         <div class="icons">
             <i class="fa fa-search"></i>
             <div class="cart" id="cartIcon">
-              <a href="#">
+              <a href="./checkout.html">
                 <i class="fa fa-shopping-cart">
                   <span id="cart-count">0</span>
                 </i>
@@ -45,6 +51,40 @@
             </div>
           </div>
     </nav>
+
+    <section id="banner">
+      <img src="https://shoplane.netlify.app/img/img1.png" alt="Image 1" />
+      <img src="https://shoplane.netlify.app/img/img2.png" alt="Image 2" />
+      <img src="https://shoplane.netlify.app/img/img3.png" alt="Image 3" />
+      <img src="https://shoplane.netlify.app/img/img4.png" alt="Image 4" />
+    </section>
+
+    <section id="features">
+      <div class="icon-container">
+        <div class="img-wrapper">
+          <img src="https://shoplane.netlify.app/img/icon1.png" alt="">
+        </div>
+        <h4>Free Delivery</h4>
+      </div>
+      <div class="icon-container">
+        <div class="img-wrapper">
+          <img src="https://shoplane.netlify.app/img/icon2.png" alt="">
+        </div>
+        <h4>Money Back Gurantee</h4>
+      </div>
+      <div class="icon-container">
+        <div class="img-wrapper">
+          <img src="https://shoplane.netlify.app/img/icon3.png" alt="">
+        </div>
+        <h4>Always Support</h4>
+      </div>
+      <div class="icon-container">
+        <div class="img-wrapper">
+          <img src="https://shoplane.netlify.app/img/icon4.png" alt="">
+        </div>
+        <h4>Secure Payment</h4>
+      </div>
+    </section>
     
     <section>
       <h2 class="section-heading">Clothing for Men and Women</h2>
@@ -90,10 +130,14 @@
     <!-- JQuery & Bootstrap js -->
     <script src="../lib/jquery/jquery.slim.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    
+    <!-- Slick Js -->
+    <script src="../lib/slick/slick.min.js"></script>
 
     <!-- My Scripts -->
     <script src="./js/burger.js"></script>
     <script src="./js/data.js"></script>
+    <script src="./js/cart.js"></script>
     <script src="./js/index.js"></script>
 
   </body>
