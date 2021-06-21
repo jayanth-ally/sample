@@ -1,22 +1,27 @@
-const loadPlaylist = async() => {
-    const playlist = await new Promise(async(resolve,reject)=>{
-        const data = fetch("https://5d76bf96515d1a0014085cf9.mockapi.io/playlist").then((res)=>res.json());
+const getDataFromApi = async (url) => {
+    const result = await new Promise(async (resolve, reject) => {
+        const data = fetch(url).then((res) => res.json());
         resolve(data);
     })
-    const cardsDiv = document.getElementById('video-cards')
-    
+    return result;
+}
 
-    playlist.forEach((video,i)=>{
+const loadPlaylist = async () => {
+    const playlist = await getDataFromApi("https://5d76bf96515d1a0014085cf9.mockapi.io/playlist");
+    const cardsDiv = document.getElementById('video-cards')
+
+
+    playlist.forEach((video, index) => {
         const card = document.createElement('div');
         card.classList.add('video-card');
         card.id = video.id;
 
-        if(i==0){
+        if (index == 0) {
             card.classList.add('selected');
-        }else{
+        } else {
             card.classList.add('not-selected');
         }
-    
+
         const imgTag = document.createElement('img');
         imgTag.src = video.thumbnail;
 
@@ -31,26 +36,23 @@ const loadPlaylist = async() => {
 }
 
 const changeVideo = async (id) => {
-    const video = await new Promise((resolve,reject)=>{
-        const data = fetch("https://5d76bf96515d1a0014085cf9.mockapi.io/video/"+id).then((res)=>res.json());
-        resolve(data);
-    })
+    const video = await getDataFromApi(`https://5d76bf96515d1a0014085cf9.mockapi.io/video/${id}`)
     const player = document.getElementById('video-player');
-    player.src = "https://player.vimeo.com/video/"+video.vimeoId;
+    player.src = "https://player.vimeo.com/video/" + video.vimeoId;
 
     const views = document.getElementById('views');
-    views.innerText = video.view+" views";
+    views.innerText = video.view + " views";
     const title = document.getElementById('title');
     title.innerText = video.title;
     const description = document.getElementById('description');
     description.innerText = video.description;
 }
 
-$(document).ready(()=>{
+$(document).ready(() => {
     loadPlaylist();
 })
 
-$(document).on('click','.not-selected',function(){
+$(document).on('click', '.not-selected', function () {
     const selectedCard = document.getElementsByClassName('selected')[0];
     selectedCard.classList.remove('selected');
     selectedCard.classList.add('not-selected');
