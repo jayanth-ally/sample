@@ -38,7 +38,7 @@ const loadPlaylist = async () => {
 const changeVideo = async (id) => {
     const video = await getDataFromApi(`https://5d76bf96515d1a0014085cf9.mockapi.io/video/${id}`)
     const player = document.getElementById('video-player');
-    player.src = "https://player.vimeo.com/video/" + video.vimeoId;
+    player.src = `https://player.vimeo.com/video/${video.vimeoId}`;
 
     const views = document.getElementById('views');
     views.innerText = video.view + " views";
